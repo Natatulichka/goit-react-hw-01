@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import css from "./SocialProfile.module.css";
+import css from "./Profile.module.css";
 const Profile = ({
   username,
   tag,

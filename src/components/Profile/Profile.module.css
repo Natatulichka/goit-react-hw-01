@@ -19,9 +19,9 @@
 }
 
 .avatar {
-  border: 3px solid #e9eef3;
+  border: 3px solid #888b8d;
   border-radius: 50%;
-
+  background-color: #2a99f3;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -35,14 +35,13 @@
 
 .tag {
   margin-bottom: 10px;
-  color: #dbe1e7;
+  color: #888b8d;
 }
 
 .location {
   margin-bottom: 30px;
-  color: #dbe1e7;
+  color: #888b8d;
 }
-
 .stats {
   display: flex;
   align-items: center;

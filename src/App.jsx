@@ -1,5 +1,5 @@
 import Section from "./components/Section/Section";
-import SocialProfile from "./components/SocialProfile/SocialProfile";
+import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 import user from "./db/userData.json";
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <Section title={"Social network profile"}>
-        <SocialProfile
+        <Profile
           username={user.username}
           tag={user.tag}
           location={user.location}

@@ -1,20 +1,20 @@
 import PropTypes from "prop-types";
-import FriendListItem from "./FriendListItem/FriendListItem";
+import css from "./FriendList.module.css";
+import FriendListItem from "./FriendListItem";
 
-export default function FriendList({ friends }) {
+const FriendList = ({ friends }) => {
   return (
-    <ul>
-      {friends.map(({ id, isOnline, avatar, name }) => (
-        <FriendListItem
-          key={id}
-          isOnline={isOnline}
-          avatar={avatar}
-          name={name}
-        />
+    <ul className={css.friendList}>
+      {friends.map(({ id, avatar, name, isOnline }) => (
+        <li key={id}>
+          <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+        </li>
       ))}
     </ul>
   );
-}
+};
+
+export default FriendList;
 
 FriendList.prototype = {
   friends: PropTypes.arrayOf(
