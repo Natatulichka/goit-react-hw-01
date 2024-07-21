@@ -1,12 +1,31 @@
-import React from "react";
-import Profile from "./components/Profile";
-// const dataFromServer = [{ descr: "Hello" }, { descr: "Guten Tag" }];
-function App() {
+import Section from "./components/Section/Section";
+import SocialProfile from "./components/SocialProfile/SocialProfile";
+import FriendList from "./components/FriendList/FriendList";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
+import user from "./db/userData.json";
+import friends from "./db/friends.json";
+import transactions from "./db/transactions.json";
+
+const App = () => {
   return (
-    <div>
-      <Profile descr="Hello" />
-      <Profile descr="Guten Tag" />;
-    </div>
+    <>
+      <Section title={"Social network profile"}>
+        <SocialProfile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+      </Section>
+      <Section title={"Friend list"}>
+        <FriendList friends={friends} />
+      </Section>
+
+      <Section title={"Transaction history"}>
+        <TransactionHistory transactions={transactions} />
+      </Section>
+    </>
   );
-}
+};
 export default App;
